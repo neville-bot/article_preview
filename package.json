@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/neville-bot/article_preview/issues"
   },
-  "homepage": "https://github.com/neville-bot/article_preview#readme"
+  "homepage": "https://github.com/neville-bot/article_preview#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
