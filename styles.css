@@ -3,7 +3,7 @@
 body {
   background-color: hsl(212, 23%, 69%);
 }
-
+/* parent node */
 .component {
   display: flex;
   flex-direction: row;
@@ -11,27 +11,36 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   border: 3px;
+  border-radius: 25px;
+  width: fit-content;
   border-color: black;
 }
+/* text color */
 .component p {
   color: hsl(217, 19%, 35%);
 }
+/* graphic container */
 .image-container img {
   width: 100%;
   height: 100%;
   vertical-align: middle;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
 }
-.image-container {
-  width: fit-content;
-}
+
+/*  info is parent of text and social badges/buttons */
 .info-container {
   justify-content: right;
   flex-direction: column;
-  width: 60%;
+  width: 100%;
   padding-left: 5%;
   padding-right: 5%;
   padding-top: 5%;
   padding-bottom: 5%;
+}
+.text-container {
+  padding-left: 10%;
+  padding-right: 10%;
 }
 .big-paragraph {
   font-size: 16px;
@@ -43,6 +52,7 @@ body {
   font-size: 13px;
   line-height: 1.5;
 }
+/* social emblems and button */
 .social-container {
   left: 0;
   bottom: 0;
@@ -52,17 +62,54 @@ body {
   align-items: center;
   padding-top: 5%;
 }
+.active-social-container {
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsl(217, 19%, 35%);
+}
+.author-info {
+  display: flex;
+  flex-direction: row;
+}
+.social-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 5px;
+}
 .social-container img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
+  padding-right: 20px;
+}
+/* footer */
+.attribution {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: cyan;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
 
 /* Mobile and small screens */
 @media screen and (max-width: 768px) {
-  .component {
+  body {
+    padding-left: 10%;
+    padding-right: 10%;
     margin-top: 10vh;
-    width: 80%;
+  }
+  .component {
     display: flex;
     flex-direction: column;
     align-items: center;
