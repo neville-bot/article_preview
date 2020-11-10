@@ -3,6 +3,9 @@
 body {
   background-color: hsl(212, 23%, 69%);
   box-sizing: border-box;
+  margin-top: 50px;
+  margin-left: 50px;
+  font-family: "Manrope", sans-serif;
 }
 /* parent node */
 .component {
@@ -102,9 +105,70 @@ social buttons */
   z-index: 1;
   border-radius: 100%;
 }
+@media only screen and (min-width: 850px) {
+  /* desktop view pop-up container */
+  .active-social-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  /* actual desktop pop-up */
+  .active-social-container .social-info {
+    width: 200px;
+    background-color: hsl(217, 19%, 35%);
+    color: hsl(212, 23%, 69%);
+    font-size: 12px;
+    letter-spacing: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    bottom: 100px;
+    left: 567px;
+  }
+  /* pop-up arrow */
+  .active-social-container .social-info::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
 
+  /* Toggle this class when clicking on the popup container (hide and show the popup) */
+  .active-social-container .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
 /* Mobile and small screens */
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 850px) {
   body {
     padding-left: 10%;
     padding-right: 40vh;
